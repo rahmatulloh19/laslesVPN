@@ -1,0 +1,67 @@
+.site-header {
+  padding-top: 46px;
+  padding-bottom: 58px;
+}
+
+.logo {
+  @include transition;
+  &:hover {
+    opacity: 0.8;
+  }
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.site-header__inner {
+  @include layout;
+}
+
+.navigation__list {
+  @include unstyled-list;
+  display: flex;
+  column-gap: 40px
+}
+
+.navigation__link {
+  @include unstyled-link(inline-block, var(--secondary-text-color));
+  line-height: 19px;
+  @include transition;
+  &:hover {
+    color: var(--mix-color)
+  }
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.site-header__sign {
+  @include unstyled-link(inline-block, var(--mix-color));
+  font-weight: 500;
+  line-height: 19px;
+  text-align: center;
+  @include transition;
+}
+
+.site-header__sign--in {
+  margin-right: 30px;
+  color: var(--main-text-color);
+  &:hover {
+    color: var(--mix-color);
+  }
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.site-header__sign--up {
+  @include view(150px, 13px 0, var(--mix-color));
+  border-radius: 50px;
+  &:hover {
+    color: #fff;
+    background-color: var(--mix-color);
+  }
+  &:active {
+    opacity: 0.6;
+  }
+}

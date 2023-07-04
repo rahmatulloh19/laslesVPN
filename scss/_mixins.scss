@@ -1,0 +1,56 @@
+@mixin layout($js:space-between, $ai:center) {
+  display: flex;
+  justify-content: $js;
+  align-items: $ai;
+}
+
+@mixin view($miw, $p, $bdc) {
+  min-width: $miw;
+  padding: $p;
+  border: 2px solid $bdc;
+  border-radius: 10px;  
+}
+
+@mixin default-text($mb, $fz:16px, $fw:400, $lh:normal, $c) {
+  margin-top: 0;
+  margin-bottom: $mb;
+  font-family: var(--main-font);
+  font-size: $fz;
+  font-weight: $fw;
+  line-height: $lh;
+  color: $c;
+}
+
+@mixin unstyled-link($d, $c) {
+  display: $d;
+  text-decoration: none;
+  color: $c;
+}
+
+@mixin unstyled-list {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+@mixin hover($c, $bgc) {
+  color: $c;
+  background-color: $bgc;
+}
+
+@mixin psevdo-el($d:block, $w, $h, $bgi, $x, $y) {
+  display: $d;
+  width: $w;
+  height: $h;
+  background-image: url($bgi);
+  background-repeat: no-repeat;
+  background-position: $x $y;
+  content: "";
+}
+
+@mixin transition {
+  transition-property: color, background-color, opacity;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}

@@ -1,0 +1,45 @@
+.site-article {
+  position: relative;
+  top: 130px;
+  z-index: 1;
+}
+
+.site-article__inner {
+  @include layout;
+  padding: 59px 70px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 33px 57px 0px rgba(0,0,0,0.06);
+  -webkit-box-shadow: 0px 33px 57px 0px rgba(0,0,0,0.06);
+  -moz-box-shadow: 0px 33px 57px 0px rgba(0,0,0,0.06);
+}
+
+.site-article__text {
+  max-width: 371px;
+}
+.site-article__title {
+  @include default-text(20px, 35px, 500, 40px, var(--main-text-color));
+}
+
+.site-article__extra {
+  display: inline-block;
+  @include default-text(0, $lh:16px, $c:#4f5665);
+}
+
+.site-article__more {
+  @include unstyled-link(inline-block, var(--mix-color));
+  @include view(250px, 17px, var(--mix-color));
+  text-align: center;
+  transition-property: color, background-color, box-shadow, opacity; 
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+  &:hover {
+    @include hover(#fff, var(--mix-color));
+    box-shadow: 0 25px 27px -8px rgba(245,56,56,0.35);
+    -webkit-box-shadow: 0 25px 27px -8px rgba(245,56,56,0.35);
+    -moz-box-shadow: 0 25px 27px -8px rgba(245,56,56,0.35);
+  }
+  &:active {
+    opacity: 0.6;
+  }
+}

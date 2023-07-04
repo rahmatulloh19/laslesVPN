@@ -1,0 +1,36 @@
+.list {
+  padding-bottom: 54px;
+}
+
+.list__inner {
+  @include layout;
+  @include unstyled-list;
+  padding: 72.5px 91px;
+  border-radius: 10px;
+  box-shadow: -1px 42px 57px 0px rgba(13,16,37,0.05);
+  -webkit-box-shadow: -1px 42px 57px 0px rgba(13,16,37,0.05);
+  -moz-box-shadow: -1px 42px 57px 0px rgba(13,16,37,0.05);
+}
+.list__item {
+  display: flex;
+  column-gap: 36px;
+  font-size: 20px;
+  line-height: 30px;
+  color: var(--secondary-text-color);
+  &--location {
+    border-left: 1px solid #eeeff2;
+  }
+  &::before {
+    @include psevdo-el($w:55px, $h:55px, $bgi:"../../images/user.svg", $x:center, $y:center);
+  }
+  &--location::before {
+    background-image: url("../../images/location.svg");
+  }
+  &--server::before {
+    background-image: url("../../images/server.svg");
+  }
+}
+
+.list__info {
+  margin: 0;
+}

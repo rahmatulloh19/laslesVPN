@@ -1,0 +1,34 @@
+.features {
+  padding-bottom: 127px;
+  background-image: url("../../images/featuresimg.svg");
+  background-repeat: no-repeat;
+  background-position: calc(50% - 280px) 0;
+}
+
+.features__inner {
+  max-width: 428px;
+  margin-left: auto;
+}
+
+.features__title {
+  @include default-text(20px, 35px, 500, 50px, var(--main-text-color));
+}
+
+.features__desc {
+  @include default-text(20px, $lh:30px, $c:var(--secondary-text-color));
+}
+
+.features__list {
+  @include unstyled-list;
+}
+
+.features__item {
+  display: flex;
+  align-items: center;
+  @include default-text(15px, 14px, $lh:30px, $c:var(--secondary-text-color));
+  vertical-align: middle;
+  &::before {
+    margin-right: 10px;
+    @include psevdo-el($w:24px, $h:24px, $bgi:"../../images/checkcircle.svg", $x:center, $y:center);
+  }
+}
